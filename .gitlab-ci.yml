@@ -1,0 +1,10 @@
+image: python:3  # Using Python 3 Docker image
+
+stages:
+  - test  # Define a stage for testing
+
+test:
+  stage: test  # Define the 'test' job
+  script:
+    - pip install -r requirements.txt  # Install dependencies
+    - python manage.py test  # Run Django tests
